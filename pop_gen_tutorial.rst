@@ -40,32 +40,13 @@ Used the thinned VCF to make input files for phylogenetic inference and populati
 Now you start
 ~~~~~~~~~~~~~
 
-Start your instance with at least 50 Gb.::
+Install many useful software.::
 
-	sudo apt-get update
-	sudo apt-get install build-essential
-	sudo apt-get install ruby git
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-	export PATH="/home/ubuntu/.linuxbrew/bin:$PATH"
-	export MANPATH="/home/ubuntu/.linuxbrew/share/man:$MANPATH"
-	export INFOPATH="/home/ubuntu/.linuxbrew/share/info:$INFOPATH"
-	export LD_LIBRARY_PATH="/home/ubuntu/.linuxbrew/lib/"
-	brew tap homebrew/science
-
-Install many useful packages.::
-
-	brew install zlib
-	brew install gsl
-	brew install homebrew/science/raxml
-	brew install homebrew/science/vcftools
-	brew install homebrew/science/openblas
-
-Install some other software.::
-
-	wget https://data.broadinstitute.org/alkesgroup/EIGENSOFT/EIG-6.1.3.tar.gz
-	tar -xvzf EIG-6.1.3.tar.gz
-	wget https://www.genetics.ucla.edu/software/admixture/binaries/admixture_linux-1.3.0.tar.gz
-	tar -xzvf admixture_linux-1.3.0.tar.gz
+	R
+	raxml
+	vcftools
+	eigensoft
+	admixture
 
 You can download the smaller data set and ancillary files from here.::
 
@@ -98,13 +79,13 @@ Make a phylogeny.::
 
 Run `ADMIXTURE` for up to 6 populations.::
 
-	~/admixture_linux-1.3.0/admixture Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ped 1
-	~/admixture_linux-1.3.0/admixture Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ped 2
+	admixture Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ped 1
+	admixture Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ped 2
 	...
 
 Run `smartpca`.::
 
-	~/EIG-6.1.3/bin/smartpca -p Massoko_smartpca.par > Massoko_smartpca.out
+	smartpca -p Massoko_smartpca.par > Massoko_smartpca.out
 
 Now that we have all the different pieces, let's start to plot the data and see what we find. Put all the results into one folder and download them locally so that we can plot and visualize them using `R`.
 
