@@ -137,7 +137,7 @@ To load the genetic diversity results,::
 Look at how the data is structured and summarize it quickly,::
 
 	head(b)
-	summarize(b)
+	summary(b)
 
 To answer some of the questions below, it might be useful to combine across both data-frames::
 
