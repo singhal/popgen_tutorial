@@ -75,7 +75,7 @@ Calculate Fst between benthic and limnetic forms.::
 
 Make a phylogeny.::
 
-	raxmlHPC-PTHREADS -T 12 -m GTRGAMMA -n Massoko -s Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K_thin5.phy -p 123 -o A_calliptera_Chitimba,A_calliptera_Bua,A_calliptera_Chizumulu
+	raxmlHPC -m GTRGAMMA -n Massoko -s Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K_thin5.phy -p 123 -o A_calliptera_Chitimba,A_calliptera_Bua,A_calliptera_Chizumulu
 
 Run `ADMIXTURE` for up to 6 populations.::
 
