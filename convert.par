@@ -1,0 +1,7 @@
+genotypename:	Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.geno
+snpname:	Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.snp
+indivname:	Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ind
+outputformat:    PED
+genotypeoutname: Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.ped
+snpoutname: Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.map
+indivoutname: Massoko_Dryad_VCF_final_subset_noIndels_maf05_thinned1K.pedind 
